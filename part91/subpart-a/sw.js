@@ -1,4 +1,4 @@
-const CACHE_NAME='soldotna-subpart-a-v2-1';
+const CACHE_NAME='soldotna-subpart-a-v2-2';
 const RESOURCES=['./','index.html','app.js','styles.css','manifest.webmanifest','assets/icon-192.png','assets/icon-512.png',...Array.from({length:10},(_,i)=>`assets/scene-${String(i+1).padStart(2,'0')}.webp`),'source/part91-2026-11-05.pdf'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(RESOURCES)).then(()=>self.skipWaiting()));});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(names=>Promise.all(names.filter(n=>n.startsWith('soldotna-subpart-a-')&&n!==CACHE_NAME).map(n=>caches.delete(n)))).then(()=>self.clients.claim()));});

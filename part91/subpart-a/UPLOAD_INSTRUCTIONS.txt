@@ -1,0 +1,17 @@
+SUBPART A — IMPRINT REFINEMENT VERSION 2.1
+
+Your existing GitHub website is unchanged until you upload this update.
+
+Upload instructions:
+1. Open https://github.com/afstafaa/aviation-microlearning/tree/main/part91/subpart-a
+2. Click Add file > Upload files.
+3. Drag the FIVE files from this folder (index.html, app.js, styles.css, sw.js, DESIGN_REVIEW.md).
+4. Commit directly to main with message: Refine Subpart A visual learning interactions
+5. Open https://afstafaa.github.io/aviation-microlearning/part91/subpart-a/ and refresh after deployment.
+6. If the old version still appears, refresh once more to allow the updated offline cache to activate.
+
+Do NOT upload the enclosing folder; upload its contents. Do not remove assets or source.
+
+The existing version is preserved in GitHub commit history, and a separate backup ZIP was created.
+
+Changes: watch/explore/decide balance (4/4/2), less tap-to-continue gating, animated concept illustrations, improved weight limit visual, clearer report comparison. No image artwork replaced yet.

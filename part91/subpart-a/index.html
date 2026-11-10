@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#102e47">
+  <meta name="description" content="A visual microlearning prototype for 14 CFR Part 91, Subpart A, following Maya and Alex at Soldotna Airport.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="icon" href="assets/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>A Soldotna Training Flight · Aviation Microlearning</title>
+<style>.library-link{border:1px solid #b8d2e2;border-radius:20px;padding:7px 11px;font-size:12px;font-weight:700;color:#174e72;text-decoration:none;white-space:nowrap;background:#eff7fd}@media(max-width:420px){.library-link{padding:6px 7px;font-size:10px}}</style></head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="brand"><div class="brand-logo" aria-hidden="true">✈</div><div><small>AVIATION MICROLEARNING</small><strong>A Soldotna Training Flight</strong></div></div>
+      <div class="header-actions"><a href="../../" class="library-link" aria-label="Back to aviation microlearning library">← Library</a><button id="install" class="ghost install-btn" hidden>Install app</button><button id="discoveries-btn" class="outline compact" aria-label="Open airport discoveries">☷ <span>Discoveries</span></button></div>
+    </header>
+    <main class="main">
+      <div class="masthead"><div class="pill">14 CFR Part 91 · Subpart A</div><span class="version-label">VERSION 2 · INTERACTIVE PROTOTYPE</span></div>
+      <section class="lesson-top" aria-label="Lesson progress"><div class="lesson-top-label"><span id="phase-label">THE TRAINING FLIGHT</span><span id="count-label">1 / 10</span></div><div id="progress-steps" class="progress-steps"></div></section>
+      <section class="lesson-grid">
+        <div class="visual-pane">
+          <div class="illustration" id="illustration"><img id="scene-image" src="assets/scene-01.webp" alt="Illustration of Maya and instructor Alex at the airport"><div class="visual-label" id="scene-picture-label">SOLDOTNA · ALASKA</div></div>
+          <div id="artwork-caption" class="artwork-caption">Maya and Alex prepare for a local training flight.</div>
+          <div class="aircraft-specimen" id="aircraft-specimen" hidden>
+            <svg viewBox="0 0 450 170" role="img" aria-label="Simplified Cessna 172 front-view diagram with a single two-blade propeller">
+              <defs><linearGradient id="wingfade" x1="0" x2="1"><stop stop-color="#eaf2f8"/><stop offset="1" stop-color="#b7d1e4"/></linearGradient></defs>
+              <path d="M18 41 Q225 17 432 41 L432 55 Q225 45 18 55 Z" fill="url(#wingfade)" stroke="#547388" stroke-width="3"/>
+              <path d="M105 49 L188 108 M345 49 L262 108" stroke="#96b1c2" stroke-width="7" stroke-linecap="round"/>
+              <path d="M181 36 Q225 28 269 36 L283 119 Q225 145 167 119 Z" fill="#f5f8fa" stroke="#567287" stroke-width="3"/>
+              <path d="M197 46 L253 46 L259 80 L191 80Z" fill="#487f9d"/>
+              <path d="M197 121 L191 145 M253 121 L259 145" stroke="#556b7b" stroke-width="7" stroke-linecap="round"/>
+              <circle cx="191" cy="150" r="11" fill="#263f50"/><circle cx="259" cy="150" r="11" fill="#263f50"/>
+              <rect x="212" y="123" width="26" height="16" rx="7" fill="#e8eff3" stroke="#587081" stroke-width="2"/>
+              <path d="M211 36 C205 16 203 0 215 -3 Q228 10 226 35 C237 62 245 80 233 90 Q220 76 224 49Z" transform="translate(0 17)" fill="#304b5d" stroke="#19384e" stroke-width="2"/>
+              <circle cx="225" cy="59" r="11" fill="#dbe7ed" stroke="#50697a" stroke-width="3"/>
+              <text x="225" y="166" text-anchor="middle" fill="#547388" font-size="11">Training schematic · two-blade, nose-mounted prop</text>
+            </svg>
+          </div>
+        </div>
+        <div class="learning-pane">
+          <div class="scene-meta"><span id="story-phase">THE STORY</span><span class="dot" aria-hidden="true"></span><span id="duration">~25 SEC</span></div>
+          <h1 id="scene-title">The airplane passed inspection. So why might we still not fly?</h1>
+          <p class="scene-narrative" id="scene-narrative"></p>
+          <div id="interactive" class="interactive"></div>
+          <section class="reg-panel" aria-label="Regulatory source"><div class="reg-head"><span>📖 Regulatory reference</span><button class="reg-toggle" id="ref-toggle" aria-expanded="false">View source <span aria-hidden="true">⌄</span></button></div><div id="reg-chips" class="reg-chips"></div><div id="ref-detail" class="ref-detail" hidden></div></section>
+          <div class="nav-actions"><button id="back" class="outline nav-button">← Back</button><button id="next" class="primary nav-button">Continue →</button></div>
+        </div>
+      </section>
+      <div class="foot-note">Instructional prototype based on the supplied Nov. 5, 2026 eCFR PDF. Illustrations and aircraft values are examples, not preflight or legal authorization. Other regulations may apply.</div>
+    </main>
+  </div>
+  <dialog id="discoveries-dialog" class="discoveries-dialog"><div class="dialog-header"><div><small>SUBPART A · AIRPORT DISCOVERIES</small><h2>Explore beyond the training flight</h2></div><button id="close-dialog" class="outline compact">Close ✕</button></div><p class="secondary">Seven short side stories cover sections that don't naturally fit Maya and Alex's C172 flight. Every substantive section in Subpart A has a place.</p><div id="discovery-list" class="discovery-list"></div><div id="discovery-detail" class="discovery-detail" hidden></div></dialog>
+  <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+ "name":"Soldotna Aviation Microlearning — Part 91",
+ "short_name":"Aviation Learn",
+ "description":"Interactive visual aviation microlearning about 14 CFR Part 91 Subpart A",
+ "start_url":"./index.html",
+ "scope":"./",
+ "display":"standalone",
+ "background_color":"#f5fafc",
+ "theme_color":"#102e47",
+ "icons":[{"src":"assets/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},{"src":"assets/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}]
+}

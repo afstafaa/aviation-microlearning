@@ -21,3 +21,23 @@
 @keyframes rise-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}@keyframes logbook-appear{from{opacity:0;transform:translateY(12px) rotate(-3deg)}to{opacity:1;transform:translateY(0) rotate(-3deg)}}@keyframes grow-line{from{transform:scaleY(0)}to{transform:scaleY(1)}}
 @media(max-width:480px){.visual-proof{padding:13px}.scope-inputs span{font-size:11px;padding:8px}.logbook-demo{gap:10px}.logbook-page,.condition-card{padding:11px 6px;min-height:155px}.logbook-page strong,.condition-card strong{font-size:14px}.comparison-arrow{left:-14px}.role-panel strong,.report-panel strong{font-size:14px}}
 @media(prefers-reduced-motion:reduce){.scope-inputs span,.flow-down,.scope-result,.stagger-map .concept-node,.logbook-page,.condition-compare,.connection-step,.connect-line{animation:none!important}.weight-fill{transition:none}}
+
+
+/* Subpart A visual pass 2: genuine click-to-inspect artwork and crack reveal. */
+.defect-art-hotspot{position:absolute;z-index:5;transform:translate(-50%,-50%);width:62px;height:62px;display:grid;place-items:center;border-radius:50%;border:3px solid #fff4be;background:#ffc72f48;color:#fff;box-shadow:0 0 0 8px #ffce3980,0 4px 18px #051b3e8c;animation:defect-pulse 2.2s ease-in-out infinite;cursor:zoom-in}
+.defect-art-hotspot span{display:grid;place-items:center;font-size:33px;line-height:1;width:41px;height:41px;border-radius:50%;background:#163b5caa}
+.defect-art-hotspot:hover,.defect-art-hotspot:focus-visible{background:#f7b428b3;box-shadow:0 0 0 11px #ffce3970,0 5px 23px #051b3e8c}
+.defect-art-hotspot[aria-pressed="true"]{animation:none;background:#e88a32aa;box-shadow:0 0 0 6px #ffce3970,0 4px 18px #051b3e8c}
+@keyframes defect-pulse{0%,100%{box-shadow:0 0 0 6px #ffce396b,0 4px 15px #051b3e73}55%{box-shadow:0 0 0 13px #ffce3926,0 4px 15px #051b3e73}}
+.inspect-instruction{display:flex;align-items:center;gap:9px;background:#eef6fb;border:1px solid #cae1ef;border-radius:12px;padding:10px 12px;font-size:13px;line-height:1.4}
+.inspect-instruction>span:nth-child(2){flex:1}
+.inspect-fallback{white-space:nowrap;padding:9px 11px;font-size:12px}
+.crack-reveal{margin:0;overflow:hidden;border:2px solid #ddaa46;background:#fff9ec;border-radius:14px;animation:defect-enter .32s ease-out}
+.crack-zoom-art{position:relative;overflow:hidden;}
+.crack-zoom-art img{display:block;width:100%;aspect-ratio:478/227;object-fit:cover;}
+.crack-zoom-label{position:absolute;bottom:9px;left:10px;background:#153d59e8;color:white;font-size:10px;letter-spacing:.1em;font-weight:850;padding:6px 10px;border-radius:7px}
+.crack-reveal figcaption{padding:12px 14px;font-size:13px;line-height:1.45;color:#364f60}
+.crack-reveal figcaption strong{display:block;font-size:15px;color:#813a28;margin-bottom:4px}
+@keyframes defect-enter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:610px){.inspect-instruction{flex-wrap:wrap}.inspect-fallback{width:100%;white-space:normal}.defect-art-hotspot{width:52px;height:52px}.defect-art-hotspot span{width:35px;height:35px;font-size:28px}}
+@media(prefers-reduced-motion:reduce){.defect-art-hotspot,.crack-reveal{animation:none}}
